@@ -1,10 +1,10 @@
 <configuration>
     <input>
         <net-file value="dhanbad.net.xml"/>
-        <route-files value="routes.rou.xml"/>
+        <route-files value="routes.rou.xml,presenter_routes.rou.xml"/>
     </input>
     <time>
         <begin value="0"/>
-        <end value="3600"/>
+        <end value="20000"/>
     </time>
 </configuration>

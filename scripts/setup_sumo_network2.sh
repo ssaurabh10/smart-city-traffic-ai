@@ -20,6 +20,6 @@ else
 fi
 
 echo "Using randomTrips.py at: $RANDOM_TRIPS"
-python3 "$RANDOM_TRIPS" -n dhanbad.net.xml -o routes.rou.xml --end 3600 --fringe-factor 10 --period 2
+python3 "$RANDOM_TRIPS" -n dhanbad.net.xml -o routes.rou.xml --end 20000 --fringe-factor 10 --period 1
 
 echo "SUMO setup complete!"

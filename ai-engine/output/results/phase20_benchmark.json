@@ -1,0 +1,55 @@
+{
+  "config": {
+    "steps": 1000,
+    "warmup_steps": 200,
+    "seed": 2026,
+    "sumocfg": "/home/saurabh/repos/smart-city-traffic-ai/sumo/dhanbad.sumocfg",
+    "model_path": "/home/saurabh/repos/smart-city-traffic-ai/ai-engine/output/models/ppo_traffic_model.zip"
+  },
+  "results": {
+    "PPO RL Multi-Agent": {
+      "mean_waiting_s": 203.152,
+      "mean_queue_length": 3.9,
+      "mean_co2_mg_s": 798169.507,
+      "mean_co2_g_s": 798.17,
+      "throughput_vehicles": 594,
+      "arrived_vehicles": 382,
+      "vehicles_observed": 594,
+      "samples": 1000
+    },
+    "Webster Fixed-Cycle": {
+      "mean_waiting_s": 194.827,
+      "mean_queue_length": 3.485,
+      "mean_co2_mg_s": 798441.768,
+      "mean_co2_g_s": 798.442,
+      "throughput_vehicles": 594,
+      "arrived_vehicles": 383,
+      "vehicles_observed": 594,
+      "samples": 1000
+    },
+    "Static Timing": {
+      "mean_waiting_s": 203.152,
+      "mean_queue_length": 3.9,
+      "mean_co2_mg_s": 798169.507,
+      "mean_co2_g_s": 798.17,
+      "throughput_vehicles": 594,
+      "arrived_vehicles": 382,
+      "vehicles_observed": 594,
+      "samples": 1000
+    }
+  },
+  "improvements_vs_rl": {
+    "Webster Fixed-Cycle": {
+      "waiting_time_pct": -4.27,
+      "queue_length_pct": -11.91,
+      "emissions_pct": 0.03,
+      "throughput_pct": 0.0
+    },
+    "Static Timing": {
+      "waiting_time_pct": 0.0,
+      "queue_length_pct": 0.0,
+      "emissions_pct": 0.0,
+      "throughput_pct": 0.0
+    }
+  }
+}

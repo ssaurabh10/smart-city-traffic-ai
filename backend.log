@@ -1,0 +1,15 @@
+2026-05-09 13:10:29,849 [INFO] traffic-backend: Using device: cuda (NVIDIA GeForce RTX 4050 Laptop GPU)
+INFO:     Started server process [11642]
+INFO:     Waiting for application startup.
+2026-05-09 13:10:29,867 [INFO] cache: Redis connected → redis://localhost:6379
+2026-05-09 13:10:29,867 [INFO] traffic-backend: Cache layer ready
+/home/saurabh/repos/smart-city-traffic-ai/venv/lib/python3.14/site-packages/stable_baselines3/common/on_policy_algorithm.py:150: UserWarning: You are trying to run PPO on the GPU, but it is primarily intended to run on the CPU when not using a CNN policy (you are using ActorCriticPolicy which should be a MlpPolicy). See https://github.com/DLR-RM/stable-baselines3/issues/1245 for more info. You can pass `device='cpu'` or `export CUDA_VISIBLE_DEVICES=` to force using the CPU.Note: The model will train, but the GPU utilization will be poor and the training might take longer than on CPU.
+  warnings.warn(
+2026-05-09 13:10:30,802 [INFO] traffic-backend: PPO model loaded on cuda (158,981 params)
+2026-05-09 13:10:30,802 [INFO] traffic-backend: Backend ready
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): [errno 98] address already in use
+INFO:     Waiting for application shutdown.
+2026-05-09 13:10:30,802 [INFO] cache: Redis disconnected
+2026-05-09 13:10:30,802 [INFO] traffic-backend: Backend shut down
+INFO:     Application shutdown complete.

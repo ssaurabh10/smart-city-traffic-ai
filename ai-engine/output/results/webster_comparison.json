@@ -1,0 +1,8 @@
+{
+  "Webster Fixed-Cycle": {
+    "mean_wait": 9.304,
+    "mean_queue": 1.666,
+    "mean_co2": 624819.830644088,
+    "throughput": 300
+  }
+}

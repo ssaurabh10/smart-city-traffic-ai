@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Dense recurring flows for demos and presentations.
+    These use valid Dhanbad routes sampled from the generated route file,
+    but keep inserting vehicles for the full presentation window so the
+    backend AI can produce real queue/congestion alerts.
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <route id="presenter_route_0" edges="1029288141#2 1029288141#3 1029288141#4 1029288141#5 1029288141#6 -1028941365#8 -1031056771#6 -1031056771#5 -1031056771#4 -1031056771#2 -1031056771#1 -1031056771#0 -1390306903#1 1394488469#1 1394488469#2 1394488469#4 1394488469#6 1394488469#7 1394488469#8 1394488469#9 1394488469#10 1394488469#11 1394488469#12 1394488469#13 1394488469#14 1394488469#15 1394488469#17 -1298041800#7 -1298041800#6 -1298041800#5 -1028944395#4 -1028944395#3 -1028944395#2 -1028944395#1 -1028944395#0 -1028941366#17 -1028941366#16 1029191016#0 1029191016#1 1029191016#2 601715960#5 601715960#6 601715960#7 601715960#8 1029191017#1 1029191017#2 1029216613 -1028341123#1"/>
+    <route id="presenter_route_1" edges="-1031057472#2 1031057472#2 1031057472#3 1031057472#4 601916754#6 601916754#7 601916754#8 601916754#9 601900898#8 601900898#9 1031149137 -1031058622#4 -1031058622#3"/>
+    <route id="presenter_route_2" edges="1030305199#0 -1030305198#0 -1030304116#6 -1030304116#4 -1030304116#3 -1030304116#2 -1030304116#1 -1030304116#0 -1030345979#3 -1030345979#2 -1030345979#0 -800346766#21 -800346766#19 -800346766#18 -800346766#17 -800346766#16 -800346766#15 -800346766#14 -800346766#12 -800346766#11 -800346766#10 -800346766#9 1030299413#0 1030299413#1 1030299413#2 1030299413#3 1030299413#5 1030351021 -1030324652#0 -800722631 -800474231#3 -800474231#2 -800474232#0 800339102#4 800339102#5 1030324649#0 1030324649#1"/>
+    <route id="presenter_route_3" edges="1258566772#0 1258566772#2 -601935216#0 1232840997#8 1232840997#9 1232840997#10 1232840997#11 1232840997#12 1232840997#13 1232840997#14 1232840997#15 601900898#0 601900898#1 601900898#2 601900898#3 601900898#4 601900898#5 601900898#6 601900898#7 601900898#8 1031058625 -1029287546#19 -1029287546#18 -1029287546#17 -1029287546#16 -1029287546#15 -1029287546#14 -1029287546#13 -1029287546#12 -1029287546#9 -1029287546#8 -1029287546#6 -1029287546#5 -1029287546#4 -1029289326#10 -1029289326#8 -1029291781#3 -1029291781#2 -1029291781#1 -1029291780#4 -1029291922#0"/>
+    <route id="presenter_route_4" edges="1029291923 1029289326#6 1029289326#8 1029289326#10 -1029287546#3 -1029287546#2 -1029287546#1 -1029287546#0 1298028884#1 1298028884#2 1298028885#0 1272764906#1 1298028881#11 1298028882 1298028879#0 1298027074#0 1298027074#1 1007095334#0 1007095334#1 1007095334#2 1007095334#4 1007095334#5 1007095334#7 1007095334#9 1007095334#10 1007095334#11 1007095334#12 1007095334#13 1007095334#14 1007095334#15 1007095334#16 1029251404#0 1029251404#1 1029252113"/>
+    <route id="presenter_route_5" edges="1031068311 -1031068305#6 -1031068305#5 -1031068305#4 -1031068305#3 1031068312 1232840997#11 1232840997#12 1232840997#13 1232840997#14 1232840997#15 1232840997#16 1232840997#17 -1232840998#2 -1232840998#1 -1232840998#0 1024299404#0 1024299404#1 1024299404#2 1024299404#3 1024299404#4 -1394488468#2 -1394488468#0 1394488469#0 1394488469#1 1394488469#2 1394488469#4 1394488469#6 1394488469#7 1394488469#8 800145466#9 1030345971"/>
+
+    <flow id="presenter_flow_0" route="presenter_route_0" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+    <flow id="presenter_flow_1" route="presenter_route_1" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+    <flow id="presenter_flow_2" route="presenter_route_2" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+    <flow id="presenter_flow_3" route="presenter_route_3" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+    <flow id="presenter_flow_4" route="presenter_route_4" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+    <flow id="presenter_flow_5" route="presenter_route_5" begin="0" end="20000" period="0.8" departLane="best" departSpeed="max"/>
+
+    <!-- Direct demand on the TLS approaches monitored by the backend dashboard. -->
+    <route id="presenter_tls_0a" edges="-1030302881#12"/>
+    <route id="presenter_tls_0b" edges="1030302881#11"/>
+    <route id="presenter_tls_1a" edges="-1394594966#1"/>
+    <route id="presenter_tls_1b" edges="1394594966#0"/>
+    <route id="presenter_tls_3a" edges="-1030304121#3"/>
+    <route id="presenter_tls_3b" edges="1030304121#2"/>
+    <route id="presenter_tls_5a" edges="-235196949#5"/>
+    <route id="presenter_tls_5b" edges="235196949#1"/>
+    <route id="presenter_tls_8a" edges="-1031579597#6"/>
+    <route id="presenter_tls_8b" edges="1031579597#4"/>
+
+    <flow id="presenter_tls_flow_0a" route="presenter_tls_0a" begin="0" end="20000" period="0.3" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_0b" route="presenter_tls_0b" begin="0" end="20000" period="0.3" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_1a" route="presenter_tls_1a" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_1b" route="presenter_tls_1b" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_3a" route="presenter_tls_3a" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_3b" route="presenter_tls_3b" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_5a" route="presenter_tls_5a" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_5b" route="presenter_tls_5b" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_8a" route="presenter_tls_8a" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+    <flow id="presenter_tls_flow_8b" route="presenter_tls_8b" begin="0" end="20000" period="0.4" departLane="best" departSpeed="max"/>
+</routes>

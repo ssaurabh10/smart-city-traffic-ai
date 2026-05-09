@@ -131,6 +131,7 @@ class SmartCityTrafficEnv(gym.Env):
         self.rcfg        = reward_cfg or RewardConfig()
         self.port        = port
         self.seed_val    = seed
+        self._label      = f"sumo_{port}"   # unique TraCI connection label
 
         # Internal state
         self._step:            int   = 0
@@ -165,6 +166,7 @@ class SmartCityTrafficEnv(gym.Env):
         options: Optional[dict] = None,
     ) -> Tuple[np.ndarray, dict]:
         super().reset(seed=seed)
+        traci.switch(self._label) if self._sumo_running else None
 
         self._stop_sumo()
         self._start_sumo()
@@ -187,6 +189,7 @@ class SmartCityTrafficEnv(gym.Env):
         Apply action, advance one simulation second, return (obs, reward, …).
         """
         assert self.action_space.contains(action), f"Invalid action {action}"
+        traci.switch(self._label)   # ensure this env's connection is active
 
         # ── Execute action ───────────────────────────────────────────────────
         if self._in_yellow:
@@ -239,8 +242,9 @@ class SmartCityTrafficEnv(gym.Env):
             "--collision.action", "warn",
             "--random",        "false",
         ]
-        traci.start(cmd, port=self.port)
+        traci.start(cmd, port=self.port, label=self._label)
         self._sumo_running = True
+        traci.switch(self._label)
 
         # Auto-detect TLS if not specified — prefer most complex junction
         tls_ids = list(traci.trafficlight.getIDList())
@@ -297,6 +301,7 @@ class SmartCityTrafficEnv(gym.Env):
     def _stop_sumo(self):
         if self._sumo_running:
             try:
+                traci.switch(self._label)
                 traci.close()
             except Exception:
                 pass

@@ -1,0 +1,28 @@
+{
+  "episodes": 5,
+  "mean_reward": 0.0,
+  "std_reward": 0.0,
+  "mean_queue": 0.0,
+  "mean_wait_s": 0.0,
+  "per_episode_rewards": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "per_episode_queues": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "per_episode_waits": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

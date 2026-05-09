@@ -26,18 +26,18 @@ else
 fi
 
 echo "Using randomTrips.py at: $RANDOM_TRIPS"
-python3 "$RANDOM_TRIPS" -n dhanbad.net.xml -o routes.rou.xml --end 3600 --fringe-factor 10 --period 2
+python3 "$RANDOM_TRIPS" -n dhanbad.net.xml -o routes.rou.xml --end 20000 --fringe-factor 10 --period 1
 
 echo "4. Creating SUMO configuration file..."
 cat <<EOF > dhanbad.sumocfg
 <configuration>
     <input>
         <net-file value="dhanbad.net.xml"/>
-        <route-files value="routes.rou.xml"/>
+        <route-files value="routes.rou.xml,presenter_routes.rou.xml"/>
     </input>
     <time>
         <begin value="0"/>
-        <end value="3600"/>
+        <end value="20000"/>
     </time>
 </configuration>
 EOF
